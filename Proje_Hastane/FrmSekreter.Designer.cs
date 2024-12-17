@@ -48,6 +48,7 @@
             this.BtnGirisYap.TabIndex = 20;
             this.BtnGirisYap.Text = "Giriş Yap";
             this.BtnGirisYap.UseVisualStyleBackColor = true;
+            this.BtnGirisYap.Click += new System.EventHandler(this.BtnGirisYap_Click);
             // 
             // LnkUye
             // 
@@ -68,6 +69,7 @@
             this.TxtSifre.Name = "TxtSifre";
             this.TxtSifre.Size = new System.Drawing.Size(112, 31);
             this.TxtSifre.TabIndex = 18;
+            this.TxtSifre.UseSystemPasswordChar = true;
             // 
             // MskTC
             // 
@@ -127,7 +129,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmSekreter";
-            this.Text = "FrmSekreterGiriş";
+            this.Text = "Sekreter Girişi";
             this.ResumeLayout(false);
             this.PerformLayout();
 

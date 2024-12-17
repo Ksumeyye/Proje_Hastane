@@ -47,6 +47,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -67,6 +69,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hasta Bilgisi";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // LblAdSoyad
             // 
@@ -110,6 +113,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.LnkBilgiDuzenle);
             this.groupBox2.Controls.Add(this.BtnRandevuAl);
             this.groupBox2.Controls.Add(this.label7);
@@ -128,28 +133,30 @@
             // LnkBilgiDuzenle
             // 
             this.LnkBilgiDuzenle.AutoSize = true;
-            this.LnkBilgiDuzenle.Location = new System.Drawing.Point(148, 284);
+            this.LnkBilgiDuzenle.Location = new System.Drawing.Point(110, 296);
             this.LnkBilgiDuzenle.Name = "LnkBilgiDuzenle";
             this.LnkBilgiDuzenle.Size = new System.Drawing.Size(147, 23);
             this.LnkBilgiDuzenle.TabIndex = 7;
             this.LnkBilgiDuzenle.TabStop = true;
             this.LnkBilgiDuzenle.Text = "Bilgilerini Düzenle";
+            this.LnkBilgiDuzenle.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkBilgiDuzenle_LinkClicked);
             // 
             // BtnRandevuAl
             // 
             this.BtnRandevuAl.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnRandevuAl.Location = new System.Drawing.Point(147, 243);
+            this.BtnRandevuAl.Location = new System.Drawing.Point(123, 262);
             this.BtnRandevuAl.Name = "BtnRandevuAl";
             this.BtnRandevuAl.Size = new System.Drawing.Size(125, 34);
             this.BtnRandevuAl.TabIndex = 5;
             this.BtnRandevuAl.Text = "Randevu Al";
             this.BtnRandevuAl.UseVisualStyleBackColor = true;
+            this.BtnRandevuAl.Click += new System.EventHandler(this.BtnRandevuAl_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(67, 127);
+            this.label7.Location = new System.Drawing.Point(39, 160);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 23);
             this.label7.TabIndex = 6;
@@ -158,7 +165,7 @@
             // RchSikayet
             // 
             this.RchSikayet.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.RchSikayet.Location = new System.Drawing.Point(147, 127);
+            this.RchSikayet.Location = new System.Drawing.Point(123, 160);
             this.RchSikayet.Name = "RchSikayet";
             this.RchSikayet.Size = new System.Drawing.Size(125, 96);
             this.RchSikayet.TabIndex = 4;
@@ -168,16 +175,17 @@
             // 
             this.CmbDoktor.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbDoktor.FormattingEnabled = true;
-            this.CmbDoktor.Location = new System.Drawing.Point(148, 79);
+            this.CmbDoktor.Location = new System.Drawing.Point(124, 112);
             this.CmbDoktor.Name = "CmbDoktor";
             this.CmbDoktor.Size = new System.Drawing.Size(121, 31);
             this.CmbDoktor.TabIndex = 5;
+            this.CmbDoktor.SelectedIndexChanged += new System.EventHandler(this.CmbDoktor_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(71, 87);
+            this.label6.Location = new System.Drawing.Point(43, 120);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 23);
             this.label6.TabIndex = 4;
@@ -187,7 +195,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(78, 49);
+            this.label5.Location = new System.Drawing.Point(54, 82);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 23);
             this.label5.TabIndex = 3;
@@ -197,10 +205,11 @@
             // 
             this.CmbBrans.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbBrans.FormattingEnabled = true;
-            this.CmbBrans.Location = new System.Drawing.Point(148, 41);
+            this.CmbBrans.Location = new System.Drawing.Point(124, 74);
             this.CmbBrans.Name = "CmbBrans";
             this.CmbBrans.Size = new System.Drawing.Size(121, 31);
             this.CmbBrans.TabIndex = 2;
+            this.CmbBrans.SelectedIndexChanged += new System.EventHandler(this.CmbBrans_SelectedIndexChanged);
             // 
             // groupBox3
             // 
@@ -241,6 +250,23 @@
             this.dataGridView2.Size = new System.Drawing.Size(925, 247);
             this.dataGridView2.TabIndex = 1;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(86, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 23);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "id:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(124, 37);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(122, 31);
+            this.textBox1.TabIndex = 9;
+            // 
             // FrmHastaDetay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
@@ -258,6 +284,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmHastaDetay";
             this.Text = "HastaDetay";
+            this.Load += new System.EventHandler(this.FrmHastaDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -290,5 +317,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.LinkLabel LnkBilgiDuzenle;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
     }
 }
