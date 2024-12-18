@@ -1,5 +1,5 @@
 # Proje_Hastane (Hastane Randevu Sistemi)
-C# programlama dilinde, WinFormApp (.Net Framework) MSSQL Veritabanı kullanılarak oluşturdum. Giriş ekranı ile hakkımızda ilgili olan sistemi seçtirip ilgili sisteme yönlendirir.<br/>
+C# programlama dilinde, WinFormApp (.Net Framework) ve MSSQL Veritabanı kullanılarak oluşturduğum projemdir. Giriş ekranı ile hakkımızda ilgili olan sistemi seçtirip ilgili sisteme yönlendirir.<br/>
 Giriş ekranında Hasta, Doktor ve Sekreter girişleri bulunur. Kullanıcılar T.C. Kimlik numaralarını ve şifrelerini kullanarak sisteme giriş yapabilir.<br/>
 Ayrıca Hasta kaydı bulunmayan kişiler için Üye Ol ekranı bulunur.<br/>
 Hasta girişi sağlayabilen hastalar, randevusu Sekreter tarafından atanmış Doktorlardan randevu alabilir.<br/>
