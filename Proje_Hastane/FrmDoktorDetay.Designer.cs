@@ -140,19 +140,21 @@
             this.groupBox3.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox3.Location = new System.Drawing.Point(460, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(679, 569);
+            this.groupBox3.Size = new System.Drawing.Size(1156, 569);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Randevu Listesi";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 27);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(673, 539);
+            this.dataGridView1.Size = new System.Drawing.Size(1150, 539);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox4
             // 
@@ -176,6 +178,7 @@
             this.BtnCikis.TabIndex = 3;
             this.BtnCikis.Text = "Çıkış";
             this.BtnCikis.UseVisualStyleBackColor = true;
+            this.BtnCikis.Click += new System.EventHandler(this.BtnCikis_Click);
             // 
             // BtnDuyurular
             // 
@@ -186,6 +189,7 @@
             this.BtnDuyurular.TabIndex = 1;
             this.BtnDuyurular.Text = "Duyurular";
             this.BtnDuyurular.UseVisualStyleBackColor = true;
+            this.BtnDuyurular.Click += new System.EventHandler(this.BtnDuyurular_Click);
             // 
             // BtnGuncelle
             // 
@@ -196,6 +200,7 @@
             this.BtnGuncelle.TabIndex = 0;
             this.BtnGuncelle.Text = "Bilgi Düzenle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // FrmDoktorDetay
             // 
@@ -203,7 +208,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1164, 581);
+            this.ClientSize = new System.Drawing.Size(1643, 581);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -213,7 +218,8 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.Name = "FrmDoktorDetay";
-            this.Text = "FrmDoktorDetay";
+            this.Text = "Doktor Detay";
+            this.Load += new System.EventHandler(this.FrmDoktorDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

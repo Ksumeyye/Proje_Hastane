@@ -44,14 +44,14 @@
             // 
             // TxtSoyad
             // 
-            this.TxtSoyad.Location = new System.Drawing.Point(166, 86);
+            this.TxtSoyad.Location = new System.Drawing.Point(152, 81);
             this.TxtSoyad.Name = "TxtSoyad";
             this.TxtSoyad.Size = new System.Drawing.Size(112, 31);
             this.TxtSoyad.TabIndex = 31;
             // 
             // TxtAd
             // 
-            this.TxtAd.Location = new System.Drawing.Point(166, 49);
+            this.TxtAd.Location = new System.Drawing.Point(152, 44);
             this.TxtAd.Name = "TxtAd";
             this.TxtAd.Size = new System.Drawing.Size(112, 31);
             this.TxtAd.TabIndex = 30;
@@ -60,7 +60,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(92, 94);
+            this.label4.Location = new System.Drawing.Point(78, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 23);
             this.label4.TabIndex = 29;
@@ -70,7 +70,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(118, 52);
+            this.label1.Location = new System.Drawing.Point(104, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 23);
             this.label1.TabIndex = 28;
@@ -78,7 +78,7 @@
             // 
             // MskTC
             // 
-            this.MskTC.Location = new System.Drawing.Point(166, 122);
+            this.MskTC.Location = new System.Drawing.Point(152, 117);
             this.MskTC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MskTC.Mask = "00000000000";
             this.MskTC.Name = "MskTC";
@@ -90,7 +90,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(22, 130);
+            this.label2.Location = new System.Drawing.Point(8, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 23);
             this.label2.TabIndex = 26;
@@ -100,7 +100,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(102, 202);
+            this.label5.Location = new System.Drawing.Point(88, 197);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 23);
             this.label5.TabIndex = 33;
@@ -108,16 +108,17 @@
             // 
             // TxtSifre
             // 
-            this.TxtSifre.Location = new System.Drawing.Point(166, 194);
+            this.TxtSifre.Location = new System.Drawing.Point(152, 189);
             this.TxtSifre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtSifre.Name = "TxtSifre";
             this.TxtSifre.Size = new System.Drawing.Size(112, 31);
             this.TxtSifre.TabIndex = 32;
+            this.TxtSifre.UseSystemPasswordChar = true;
             // 
             // CmbBrans
             // 
             this.CmbBrans.FormattingEnabled = true;
-            this.CmbBrans.Location = new System.Drawing.Point(166, 158);
+            this.CmbBrans.Location = new System.Drawing.Point(152, 153);
             this.CmbBrans.Name = "CmbBrans";
             this.CmbBrans.Size = new System.Drawing.Size(112, 31);
             this.CmbBrans.TabIndex = 34;
@@ -126,7 +127,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(102, 166);
+            this.label3.Location = new System.Drawing.Point(88, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 23);
             this.label3.TabIndex = 35;
@@ -136,12 +137,13 @@
             // 
             this.BtnBilgiGuncelle.BackColor = System.Drawing.Color.Wheat;
             this.BtnBilgiGuncelle.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnBilgiGuncelle.Location = new System.Drawing.Point(166, 240);
+            this.BtnBilgiGuncelle.Location = new System.Drawing.Point(152, 235);
             this.BtnBilgiGuncelle.Name = "BtnBilgiGuncelle";
             this.BtnBilgiGuncelle.Size = new System.Drawing.Size(112, 36);
             this.BtnBilgiGuncelle.TabIndex = 36;
             this.BtnBilgiGuncelle.Text = "Güncelle";
             this.BtnBilgiGuncelle.UseVisualStyleBackColor = false;
+            this.BtnBilgiGuncelle.Click += new System.EventHandler(this.BtnBilgiGuncelle_Click);
             // 
             // FrmDoktorBilgiDuzenle
             // 
@@ -166,7 +168,8 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.Name = "FrmDoktorBilgiDuzenle";
-            this.Text = "FrmDoktorBilgiDuzenle";
+            this.Text = "Doktor Bilgi Duzenle";
+            this.Load += new System.EventHandler(this.FrmDoktorBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

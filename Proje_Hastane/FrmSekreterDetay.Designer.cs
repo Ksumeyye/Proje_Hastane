@@ -38,7 +38,6 @@
             this.BtnDuyuruOlustur = new System.Windows.Forms.Button();
             this.RchDuyuru = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.BtnGuncelle = new System.Windows.Forms.Button();
             this.BtnKaydet = new System.Windows.Forms.Button();
             this.ChkDurum = new System.Windows.Forms.CheckBox();
             this.MskTC = new System.Windows.Forms.MaskedTextBox();
@@ -58,6 +57,7 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.BtnListe = new System.Windows.Forms.Button();
             this.BtnBransPanel = new System.Windows.Forms.Button();
             this.BtnDoktorPanel = new System.Windows.Forms.Button();
@@ -144,6 +144,7 @@
             this.BtnDuyuruOlustur.TabIndex = 1;
             this.BtnDuyuruOlustur.Text = "Oluştur";
             this.BtnDuyuruOlustur.UseVisualStyleBackColor = true;
+            this.BtnDuyuruOlustur.Click += new System.EventHandler(this.BtnDuyuruOlustur_Click);
             // 
             // RchDuyuru
             // 
@@ -155,7 +156,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.BtnGuncelle);
             this.groupBox3.Controls.Add(this.BtnKaydet);
             this.groupBox3.Controls.Add(this.ChkDurum);
             this.groupBox3.Controls.Add(this.MskTC);
@@ -177,16 +177,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Randevu Paneli";
             // 
-            // BtnGuncelle
-            // 
-            this.BtnGuncelle.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnGuncelle.Location = new System.Drawing.Point(105, 330);
-            this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(155, 29);
-            this.BtnGuncelle.TabIndex = 15;
-            this.BtnGuncelle.Text = "Düzenle";
-            this.BtnGuncelle.UseVisualStyleBackColor = true;
-            // 
             // BtnKaydet
             // 
             this.BtnKaydet.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -196,6 +186,7 @@
             this.BtnKaydet.TabIndex = 14;
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.UseVisualStyleBackColor = true;
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // ChkDurum
             // 
@@ -232,6 +223,7 @@
             this.CmbBrans.Name = "CmbBrans";
             this.CmbBrans.Size = new System.Drawing.Size(154, 31);
             this.CmbBrans.TabIndex = 10;
+            this.CmbBrans.SelectedIndexChanged += new System.EventHandler(this.CmbBrans_SelectedIndexChanged);
             // 
             // MskSaat
             // 
@@ -264,9 +256,9 @@
             this.label9.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.Location = new System.Drawing.Point(50, 234);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 23);
+            this.label9.Size = new System.Drawing.Size(100, 23);
             this.label9.TabIndex = 6;
-            this.label9.Text = "T.C.:";
+            this.label9.Text = "Hasta T.C.:";
             // 
             // label8
             // 
@@ -360,6 +352,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.button1);
             this.groupBox6.Controls.Add(this.BtnListe);
             this.groupBox6.Controls.Add(this.BtnBransPanel);
             this.groupBox6.Controls.Add(this.BtnDoktorPanel);
@@ -370,35 +363,49 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Hızlı Erişim";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(545, 41);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 31);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Duyurular";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // BtnListe
             // 
             this.BtnListe.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnListe.Location = new System.Drawing.Point(455, 40);
+            this.BtnListe.Location = new System.Drawing.Point(372, 41);
             this.BtnListe.Name = "BtnListe";
             this.BtnListe.Size = new System.Drawing.Size(142, 31);
             this.BtnListe.TabIndex = 2;
             this.BtnListe.Text = "Randevu Liste";
             this.BtnListe.UseVisualStyleBackColor = true;
+            this.BtnListe.Click += new System.EventHandler(this.BtnListe_Click);
             // 
             // BtnBransPanel
             // 
             this.BtnBransPanel.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnBransPanel.Location = new System.Drawing.Point(288, 40);
+            this.BtnBransPanel.Location = new System.Drawing.Point(205, 41);
             this.BtnBransPanel.Name = "BtnBransPanel";
             this.BtnBransPanel.Size = new System.Drawing.Size(142, 31);
             this.BtnBransPanel.TabIndex = 1;
             this.BtnBransPanel.Text = "Branş Paneli";
             this.BtnBransPanel.UseVisualStyleBackColor = true;
+            this.BtnBransPanel.Click += new System.EventHandler(this.BtnBransPanel_Click);
             // 
             // BtnDoktorPanel
             // 
             this.BtnDoktorPanel.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnDoktorPanel.Location = new System.Drawing.Point(117, 40);
+            this.BtnDoktorPanel.Location = new System.Drawing.Point(34, 41);
             this.BtnDoktorPanel.Name = "BtnDoktorPanel";
             this.BtnDoktorPanel.Size = new System.Drawing.Size(142, 31);
             this.BtnDoktorPanel.TabIndex = 0;
             this.BtnDoktorPanel.Text = "Doktor Paneli";
             this.BtnDoktorPanel.UseVisualStyleBackColor = true;
+            this.BtnDoktorPanel.Click += new System.EventHandler(this.BtnDoktorPanel_Click);
             // 
             // FrmSekreterDetay
             // 
@@ -418,7 +425,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.Name = "FrmSekreterDetay";
-            this.Text = "FrmSekreterDetay";
+            this.Text = "Sekreter Detay";
             this.Load += new System.EventHandler(this.FrmSekreterDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -459,7 +466,6 @@
         private System.Windows.Forms.MaskedTextBox MskSaat;
         private System.Windows.Forms.MaskedTextBox MskTarih;
         private System.Windows.Forms.TextBox Txtid;
-        private System.Windows.Forms.Button BtnGuncelle;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -468,5 +474,6 @@
         private System.Windows.Forms.Button BtnListe;
         private System.Windows.Forms.Button BtnBransPanel;
         private System.Windows.Forms.Button BtnDoktorPanel;
+        private System.Windows.Forms.Button button1;
     }
 }

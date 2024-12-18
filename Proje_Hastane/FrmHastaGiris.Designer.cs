@@ -127,7 +127,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "FrmHastaGiris";
-            this.Text = "FrmHastaGiris";
+            this.Text = "Hasta Giris";
             this.Load += new System.EventHandler(this.FrmHastaGiris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

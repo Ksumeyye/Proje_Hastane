@@ -48,6 +48,7 @@
             this.BtnGirisYap.TabIndex = 13;
             this.BtnGirisYap.Text = "Giriş Yap";
             this.BtnGirisYap.UseVisualStyleBackColor = true;
+            this.BtnGirisYap.Click += new System.EventHandler(this.BtnGirisYap_Click);
             // 
             // LnkUye
             // 
@@ -68,6 +69,7 @@
             this.TxtSifre.Name = "TxtSifre";
             this.TxtSifre.Size = new System.Drawing.Size(112, 31);
             this.TxtSifre.TabIndex = 11;
+            this.TxtSifre.UseSystemPasswordChar = true;
             // 
             // MskTC
             // 
@@ -112,6 +114,7 @@
             // 
             // FrmDoktorGiris
             // 
+            this.AcceptButton = this.BtnGirisYap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -127,7 +130,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmDoktorGiris";
-            this.Text = "FrmDoktorGiris";
+            this.Text = "Doktor Giris";
             this.ResumeLayout(false);
             this.PerformLayout();
 
