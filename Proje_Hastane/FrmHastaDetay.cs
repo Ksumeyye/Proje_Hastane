@@ -79,7 +79,7 @@ namespace Proje_Hastane
         private void CmbDoktor_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select*From Tbl_Randevular where RandevuBrans= ' " + CmbBrans.Text + "' And RandevuDoktor= ' " + CmbDoktor.Text + " '  + And RandevuDurum=0", bgl.baglanti()); //RandevuDurum = 0 (False) durumu dolu olmayan randevuları temsil eder.
+            SqlDataAdapter da = new SqlDataAdapter("Select*From Tbl_Randevular where RandevuBrans= ' " + CmbBrans.Text + "' And RandevuDoktor= ' " + CmbDoktor.Text + " '  + And RandevuDurum=0", bgl.baglanti()); //RandevuDurum = 0 (False) durumu dolu olmayan randevuları temsil eder
             da.Fill(dt);
             dataGridView2.DataSource = dt;
         }
