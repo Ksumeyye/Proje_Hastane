@@ -12,8 +12,8 @@ Sekreterler; hastane hakkında duyuru oluşturabilir, sisteme yeni doktorlar ve 
 ![Giris-1](https://github.com/user-attachments/assets/b23651f1-6fb8-4014-be8f-8193182287ef) <br/>
 
 # Hastalar
-![HastaGiris-2](https://github.com/user-attachments/assets/15fe3a1d-5ad6-4e70-b7f0-1a7729f4db26) <br/>
 ![HastaKayit](https://github.com/user-attachments/assets/e8b90670-2221-4d2a-a5ae-2c7d2f6fd6fb) <br/>
+![HastaGiris-2](https://github.com/user-attachments/assets/15fe3a1d-5ad6-4e70-b7f0-1a7729f4db26) <br/>
 ![HastaDetay](https://github.com/user-attachments/assets/528b66c5-a155-473e-aab5-b26ed4680ba8) <br/>
 ![HastaBilgileriDuzenle](https://github.com/user-attachments/assets/5f0233a2-ac2c-4881-9d2c-3bdbf0fb9203) <br/>
 # Doktorlar
